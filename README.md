@@ -89,10 +89,10 @@ AEM Path Converter is a Python tool designed to transform clipboard content —s
 
 - **Configuration File (`config.py`):**
 
-  The `config.py` file (located in the project root) centralizes configuration settings for the tool. You can modify these settings without altering the core code:
+  The `config.py` file centralizes configuration settings for the tool. You can modify these settings without altering the core code:
 
   ```py
-  # config.py
+  # path_converter/config.py
 
   # Default domain used for relative paths
   DEFAULT_DOMAIN = 'domain.com'
@@ -116,7 +116,7 @@ pkill -f aem-path-converter
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under [CC0 1.0 Universal](LICENSE).
 
 ## Contributing
 
