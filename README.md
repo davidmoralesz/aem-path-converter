@@ -87,26 +87,33 @@ AEM Path Converter is a Python tool designed to transform clipboard content —s
 
 ## Configuration
 
-- **Configuration File (`config.py`):**
+- **Configuration Files (`config.py` & `config_local.py`):**
 
-  The `config.py` file centralizes configuration settings for the tool. You can modify these settings without altering the core code:
+  The `config.py` file centralizes configuration settings for the tool. Your personal configurations should be stored in `config_local.py`.
 
+  **Creating a Local Configuration (`config_local.py`):**  
+  To customize these settings without modifying `config.py`, create a `config_local.py` file in the same directory and override only the necessary values.  
+
+  Example:
   ```py
-  # path_converter/config.py
+  # path_converter/config_local.py
 
-  # Default domain used for relative paths
-  DEFAULT_DOMAIN = 'domain.com'
+  # Custom domain used for relative paths
+  DEFAULT_DOMAIN = "custom-domain.com"
 
-  # Hotkey assignment for triggering the conversion
-  HOTKEY = '<cmd>+<shift>+.'
+  # Custom hotkey assignment
+  HOTKEY = "<cmd>+<shift>+."
 
-  # Base path used for building the AEM path
-  BASE_PATH = '/content/'
+  # Custom base path
+  BASE_PATH = "/custom-content/"
   ```
 
-  To change the default domain, hotkey or base path, simply update the corresponding values in `config.py`.
+  **Steps to Set Up:**
+  1. Copy `config_local.example.py` as `config_local.py`.
+  2. Modify values as needed.
+  3. `config_local.py` is ignored by Git, ensuring your personal settings remain local.
 
-## [Temporary] Terminating the Script
+## Terminating the Script
 
 If necessary, to stop the AEM Path Converter script running in the background, you can use the `pkill` command:
 
