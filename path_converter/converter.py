@@ -30,9 +30,10 @@ def convert_url(input_text: str) -> str:
         domain = domain.replace(".", "-")
     else:
         domain = DEFAULT_DOMAIN
+        domain = domain.replace(".", "-")
 
     # Process the path
-    path = parsed.path.rstrip(".html")  # Remove `.html` extension if present
+    path = parsed.path.removesuffix(".html")  # Remove `.html` extension if present
     path = f"/{path.lstrip('/')}"  # Ensure leading `/`
 
     return f"{BASE_PATH}{domain}{path}"

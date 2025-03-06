@@ -1,5 +1,5 @@
 # Default domain used for relative paths
-DEFAULT_DOMAIN = "domain-com"
+DEFAULT_DOMAIN = "domain.com"
 
 # Hotkey assignment for triggering the conversion
 HOTKEY = "<cmd>+<shift>+."
